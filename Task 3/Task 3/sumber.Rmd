@@ -1,0 +1,25 @@
+---
+title: "sumber"
+output: html_document
+navbar:
+  title: "Task 3"
+  left:
+    - text: "Materi"
+      href: Home.html
+    - text: "EBI Image"
+      href: index.html
+    - text: "Profile"
+      href: about.html
+    - text: "References"
+      href: sumber.html
+    
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    number_section: false
+---
+# References
+1. https://thinkstudioo.blogspot.com/2018/03/analisis-image-menggunakan-ebimage-di-r.html
+2. https://thinkstudioo.blogspot.com/2018/03/analisis-image-menggunakan-ebimage-di-r_6.html

@@ -1,0 +1,26 @@
+---
+title: "EBI Image"
+output: html_document
+navbar:
+  title: "Task 3"
+  left:
+    - text: "Materi"
+      href: Home.html
+    - text: "EBI Image"
+      href: index.html
+    - text: "Profile"
+      href: about.html
+    - text: "References"
+      href: sumber.html
+    
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    number_section: false
+---
+# Apa Itu EBI Image
+![](https://lh3.googleusercontent.com/py-ErYjNALROusHMvhsX1cAXRdVKCWwwo32S92GHpxIX7SPTxjBdEC3nkzp9T7oc6nlCnw=s85){width=20%, height=20%}<br>
+
+EBImage merupakan salah satu library dari R yang ada didalam package Bioconductor. Didalam library ini terdapat banyak tools atau alat yang bisa digunakan untuk melakukan signal processing, statistical modeling, machine learning dan visualisasi dengan data gambar atau pengolahan citra.

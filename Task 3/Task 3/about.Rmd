@@ -1,0 +1,30 @@
+---
+title: "Tentang Penulis"
+navbar:
+  title: "Task 3"
+  left:
+    - text: "Materi"
+      href: Home.html
+    - text: "EBI Image"
+      href: index.html
+    - text: "Profile"
+      href: about.html
+    - text: "References"
+      href: sumber.html
+    
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    number_section: false
+---
+# Profile Penulis
+![](https://scontent-cgk1-1.xx.fbcdn.net/v/t1.0-9/158649529_112192584260268_729237189720038804_o.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=VKxf7U6mECoAX-F5eQ7&_nc_ht=scontent-cgk1-1.xx&oh=901b38574002e6b9f8bce9bede12a6b1&oe=607DC9BF){width=30%}<br>
+Zaky Fathurrahman<br>
+UIN Maulana Malik Ibrahim Malang<br>
+
+Dosen Pembimbing<br>
+![](https://scontent-cgk1-1.xx.fbcdn.net/v/t1.0-9/101692139_10216992420151979_6304736812904231421_o.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=_TyAx9iJsuEAX8A_xPG&_nc_ht=scontent-cgk1-1.xx&oh=8b41896e2c336e9d6605bb9e9e4b5b35&oe=607BE0F9){width=30%}<br>
+Prof. Dr Suhartono S.Si M.Kom
+

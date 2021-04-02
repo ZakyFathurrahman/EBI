@@ -1,0 +1,19 @@
+name: "my-website"
+navbar:
+  title: "Task 3"
+  left:
+    - text: "Materi"
+      href: Home.html
+    - text: "EBI Image"
+      href: index.html
+    - text: "Profile"
+      href: about.html
+    - text: "References"
+      href: sumber.html
+    
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    number_section: false

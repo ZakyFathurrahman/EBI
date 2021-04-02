@@ -1,0 +1,122 @@
+---
+title: "EBI Image"
+author: Zaky Fathurrahman
+date: 16 Maret 2021
+navbar:
+  title: "Task 3"
+  left:
+    - text: "Materi"
+      href: Home.html
+    - text: "EBI Image"
+      href: index.html
+    - text: "Profile"
+      href: about.html
+    - text: "References"
+      href: sumber.html
+    
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    number_section: false
+
+---
+# Instalisasi Package EBI Image
+Pertama kita harus menginstal package EBImage terlebih dahulu. kita akan menginstall package BiocManager terlebih dahulu dengan menggunakan code berikut:
+```{r}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("EBImage")
+```
+
+# Panggil Gambar
+pada step ini akan menampilkan gambar yang akan kita panggil
+```{r}
+setwd("D:/RStudio/Task 2/Task 3/")
+library(EBImage)
+Image <- readImage('foto.jpeg')
+display(Image)
+print(Image)
+```
+
+# Brightness
+Disini kita dapat mengatur tingkat keceraham pada gambar kita
+```{r}
+Image1 <- Image + 0.2
+Image2 <- Image - 0.2
+par(mfrow= c(1,2))
+plot(Image1)
+plot(Image2)
+```
+
+# Adjusting Contrast
+Disini tempat kita mengatur tingkat kontras pada gambar kita
+```{r}
+Image3 <- Image * 0.5
+Image4 <- Image * 2
+par(mfrow= c(1,2))
+plot(Image3)
+plot(Image4)
+```
+
+# Gamma Correction
+Code berikut digunakan untuk mengatur Gamma Correction pada foto
+```{r}
+Image5 <- Image ^ 2
+Image6 <- Image ^ 0.7
+par(mfrow= c(1,2))
+plot(Image5)
+plot(Image6)
+```
+
+# Cropping
+Untuk memotong gambar kita menggunakan code berikut
+```{r}
+display(Image[189:500, 100:600,])
+```
+
+# Spatial Transformation (Rotasi)
+Untuk memutar gambar kita menggunakan code berikut
+```{r}
+Imagetr <- translate(rotate(Image, 45), c(50, 0))
+display(Imagetr)
+```
+
+# Color Management
+Untuk memanajemen warna atau mengubah warna kita menggunakan code berikut
+```{r}
+colorMode(Image) <- Grayscale
+display(Image)
+print(Image)
+colorMode(Image) <- Color
+display(Image)
+```
+
+# Filtering
+Ini digunakan untuk mengubah atau menggunakan filter
+# High Pass Filter
+```{r}
+fLow <- makeBrush(21, shape= 'disc', step=FALSE)^2
+fLow <- fLow/sum(fLow)
+Image.fLow <- filter2(Image, fLow)
+display(Image.fLow)
+```
+# Blur Filter
+```{r}
+fHigh <- matrix(1, nc = 3, nr = 3)
+fHigh[2, 2] <- -8
+Image.fHigh <- filter2(Image, fHigh)
+display(Image.fHigh)
+```
+# Median Filter
+```{r}
+aa<- medianFilter(Image.fHigh,1.1)
+par(mfrow= c(1,2))
+plot(aa)
+plot(Image.fHigh)
+Image <- readImage("foto.jpeg")
+medFltr <- medianFilter(Image, 1.1)
+display(medFltr)
+```
